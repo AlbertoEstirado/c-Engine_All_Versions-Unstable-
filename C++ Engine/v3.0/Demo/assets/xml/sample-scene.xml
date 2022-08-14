@@ -1,0 +1,404 @@
+<?xml version="1.0"?>
+<scene id="sample-scene">
+	<entities>
+        <entity id="camera">
+            <component id="transform">
+                <position>
+                    <x>2</x><y>3</y><z>25</z>
+                </position>
+                <rotation>
+                    <x>-0.6</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>1</x><y>1</y><z>1</z>
+                </scale>
+            </component>
+            <component id="camera_component">
+                <static>0</static>
+            </component>
+        </entity>
+        <entity id="light">
+            <component id="transform">
+                <position>
+                    <x>10</x><y>10</y><z>10</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>1</x><y>1</y><z>1</z>
+                </scale>
+            </component>
+            <component id="light_component"></component>
+        </entity>
+        <entity id="plataforma">
+            <component id="transform">
+                <position>
+                    <x>-16</x><y>-15</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>17</x><y>8</y><z>18</z>
+                </scale>
+            </component>
+            <component id="mesh_component">../../assets/models/cube.obj</component>
+            <component id="rigidbody3d_component">
+                <mass>0</mass>
+                 <shape type="cube">
+                    <size>
+                        <x>17</x><y>8</y><z>18</z>
+                    </size>
+                </shape>
+            </component>
+        </entity>
+        
+    <entity id="plataforma2">
+            <component id="transform">
+                <position>
+                    <x>3</x><y>-15</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>7</x><y>8</y><z>8</z>
+                </scale>
+            </component>
+            <component id="mesh_component">../../assets/models/cube.obj</component>
+        <component id="rigidbody3d_component">
+                <mass>0</mass>
+                 <shape type="cube">
+                    <size>
+                        <x>7</x><y>8</y><z>8</z>
+                    </size>
+                </shape>
+            </component>
+        </entity>
+        <entity id="plataforma3">
+            <component id="transform">
+                <position>
+                    <x>18</x><y>-15</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>7</x><y>8</y><z>8</z>
+                </scale>
+            </component>
+            <component id="mesh_component">../../assets/models/cube.obj</component>
+            <component id="rigidbody3d_component">
+                <mass>0</mass>
+                 <shape type="cube">
+                    <size>
+                        <x>7</x><y>8</y><z>8</z>
+                    </size>
+                </shape>
+            </component>
+        </entity>
+        <entity id="puente">
+            <component id="transform">
+                <position>
+                    <x>-5.5</x><y>-11.5</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>4</x><y>1</y><z>4</z>
+                </scale>
+            </component>
+            <component id="mesh_component">../../assets/models/cube.obj</component>
+            <component id="rigidbody3d_component">
+                <mass>0</mass>
+                 <shape type="cube">
+                    <size>
+                        <x>8</x><y>1</y><z>4</z>
+                    </size>
+                </shape>
+            </component>
+            <component id="trigger3d_component">
+                <size>
+                    <x>0.2f</x><y>1</y><z>1</z>
+                </size>
+            </component>
+        </entity>
+
+
+        <entity id="puerta">
+            <component id="transform">
+                <position>
+                    <x>2</x><y>-9</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>1</x><y>4</y><z>6</z>
+                </scale>
+            </component>
+            <component id="mesh_component">../../assets/models/cube.obj</component>
+        </entity> 
+
+        <entity id="llave">
+            <component id="transform">
+                <position>
+                    <x>-15</x><y>-11</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>1</x><y>1</y><z>1</z>
+                </scale>
+            </component>
+            <component id="mesh_component">../../assets/models/stanford-bunny.obj</component>
+            <component id="trigger3d_component">
+                <size>
+                    <x>1</x><y>1</y><z>1</z>
+                </size>
+            </component>
+        </entity> 
+        
+
+        <entity id="pilar">
+            <component id="transform">
+                <position>
+                    <x>17</x><y>-8</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>1</x><y>10</y><z>1</z>
+                </scale>
+            </component>
+            <component id="mesh_component">../../assets/models/cube.obj</component>
+            <component id="rigidbody3d_component">
+                <mass>0.5</mass>
+                 <shape type="cube">
+                    <size>
+                        <x>1</x><y>10</y><z>1</z>
+                    </size>
+                </shape>
+            </component>
+        </entity> 
+
+        
+        <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@     CATAPULTA     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+        
+        
+         <entity id="catapulta">
+            <component id="transform">
+                <position>
+                    <x>-9</x><y>-8</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>0.5</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">../../assets/models/cube.obj</component>
+            <component id="rigidbody3d_component">
+                <mass>2</mass>
+                 <shape type="cube">
+                    <size>
+                        <x>2</x><y>0.5</y><z>2</z>
+                    </size>
+                </shape>
+            </component>
+        </entity>
+ <entity id="lanzador">
+            <component id="transform">
+                <position>
+                    <x>-8</x><y>-7</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>0.5</y><z>1</z>
+                </scale>
+            </component>
+            <component id="mesh_component">../../assets/models/cube.obj</component>
+            <component id="rigidbody3d_component">
+                <mass>1</mass>
+                 <shape type="cube">
+                    <size>
+                        <x>2</x><y>0.5</y><z>1</z>
+                    </size>
+                </shape>
+            </component>
+            <component id="joint3d_component">
+                <other>catapulta</other>
+                <pivot>
+                    <x>1</x><y>1</y><z>0</z>
+                </pivot>
+            </component>
+        </entity>
+
+        <entity id="ball">
+            <component id="transform">
+                <position>
+                    <x>-28</x><y>0</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>1</x><y>1</y><z>1</z>
+                </scale>
+            </component>
+            <component id="mesh_component">../../assets/models/ballemi.obj</component>
+           <component id="rigidbody3d_component">
+                <mass>1</mass>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+            </component>
+        </entity>
+
+
+        <entity id="delanteraDer">
+            <component id="transform">
+                <position>
+                    <x>-8</x><y>-8</y><z>1.6</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>1</x><y>1</y><z>1</z>
+                </scale>
+            </component>
+            <component id="mesh_component">../../assets/models/ballemi.obj</component>
+            <component id="rigidbody3d_component">
+                <mass>1</mass>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+            </component>
+            <component id="joint3d_component">
+                <other>catapulta</other>
+                <pivot>
+                    <x>1</x><y>0</y><z>1.6</z>
+                </pivot>
+            </component>
+        </entity>
+        <entity id="delanteraIzq">
+            <component id="transform">
+                <position>
+                    <x>-8</x><y>-8</y><z>-1.6</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>1</x><y>1</y><z>1</z>
+                </scale>
+            </component>
+            <component id="mesh_component">../../assets/models/ballemi.obj</component>
+            <component id="rigidbody3d_component">
+                <mass>1</mass>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+            </component>
+            <component id="joint3d_component">
+                <other>catapulta</other>
+                <pivot>
+                    <x>1</x><y>0</y><z>-1.6</z>
+                </pivot>
+            </component>
+        </entity>
+        <entity id="traseraDer">
+            <component id="transform">
+                <position>
+                    <x>-9</x><y>-8</y><z>1.6</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>1</x><y>1</y><z>1</z>
+                </scale>
+            </component>
+            <component id="mesh_component">../../assets/models/ballemi.obj</component>
+            <component id="rigidbody3d_component">
+                <mass>1</mass>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+            </component>
+            <component id="joint3d_component">
+                <other>catapulta</other>
+                <pivot>
+                    <x>-1</x><y>0</y><z>1.6</z>
+                </pivot>
+            </component>
+        </entity>
+        <entity id="traseraIzq">
+            <component id="transform">
+                <position>
+                    <x>-9</x><y>-8</y><z>-1.6</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>1</x><y>1</y><z>1</z>
+                </scale>
+            </component>
+            <component id="mesh_component">../../assets/models/ballemi.obj</component>
+            <component id="rigidbody3d_component">
+                <mass>1</mass>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+            </component>
+            <component id="joint3d_component">
+                <other>catapulta</other>
+                <pivot>
+                    <x>-1</x><y>0</y><z>-1.6</z>
+                </pivot>
+            </component>
+        </entity>
+
+
+         <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+        
+        
+    </entities>
+</scene>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

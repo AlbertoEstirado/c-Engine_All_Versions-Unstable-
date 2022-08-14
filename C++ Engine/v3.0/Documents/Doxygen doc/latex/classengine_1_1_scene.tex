@@ -1,0 +1,187 @@
+\hypertarget{classengine_1_1_scene}{}\doxysection{engine\+::Scene Class Reference}
+\label{classengine_1_1_scene}\index{engine::Scene@{engine::Scene}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classengine_1_1_scene_a2d512cb3650e1de51c2af78e3b9a2390}{Scene}} (const std\+::string \&name, const std\+::string \&path, \mbox{\hyperlink{classengine_1_1_window}{Window}} \&window)
+\begin{DoxyCompactList}\small\item\em Constructor of the scene, we initialize all systems and save the path. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classengine_1_1_scene_ad95506187369958614d26526d7609430}\label{classengine_1_1_scene_ad95506187369958614d26526d7609430}} 
+void \mbox{\hyperlink{classengine_1_1_scene_ad95506187369958614d26526d7609430}{load\+\_\+scene}} ()
+\begin{DoxyCompactList}\small\item\em Funtion that parse the xml and creates entities and their componensts. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classengine_1_1_scene_aefe8f56cb0eaa1e45bfbb7b21e8e7f39}\label{classengine_1_1_scene_aefe8f56cb0eaa1e45bfbb7b21e8e7f39}} 
+void \mbox{\hyperlink{classengine_1_1_scene_aefe8f56cb0eaa1e45bfbb7b21e8e7f39}{awake}} ()
+\begin{DoxyCompactList}\small\item\em Runs the awake method of all systems. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classengine_1_1_scene_a25912981e68d95fd90155c1f4ed030ad}\label{classengine_1_1_scene_a25912981e68d95fd90155c1f4ed030ad}} 
+void \mbox{\hyperlink{classengine_1_1_scene_a25912981e68d95fd90155c1f4ed030ad}{start}} ()
+\begin{DoxyCompactList}\small\item\em Runs the start method of all systems. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classengine_1_1_scene_a57c61c95426c877d6825ebd0f3596eae}{update}} (float time)
+\begin{DoxyCompactList}\small\item\em Runs the run method of all systems. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classengine_1_1_scene_a70bb403b21d8106d3df24f9eda8e0e13}\label{classengine_1_1_scene_a70bb403b21d8106d3df24f9eda8e0e13}} 
+void \mbox{\hyperlink{classengine_1_1_scene_a70bb403b21d8106d3df24f9eda8e0e13}{render}} ()
+\begin{DoxyCompactList}\small\item\em Runs the \mbox{\hyperlink{classengine_1_1_render}{Render}} \mbox{\hyperlink{classengine_1_1_system}{System}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classengine_1_1_scene_a842af6451d167d1ae3a086bed36258b7}{add\+\_\+entity}} (\mbox{\hyperlink{classengine_1_1_entity}{Entity}} $\ast$)
+\begin{DoxyCompactList}\small\item\em We add to the map a new entity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classengine_1_1_scene_a931d7ba546b7ee287047bd996a75f369}\label{classengine_1_1_scene_a931d7ba546b7ee287047bd996a75f369}} 
+\mbox{\hyperlink{classengine_1_1_dispatcher}{Dispatcher}} \& \mbox{\hyperlink{classengine_1_1_scene_a931d7ba546b7ee287047bd996a75f369}{get\+\_\+dispatcher}} ()
+\begin{DoxyCompactList}\small\item\em Getter of the dispatcher. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classengine_1_1_entity}{Entity}} $\ast$ \mbox{\hyperlink{classengine_1_1_scene_ac577d9f3933876053df866357ead7a67}{get\+\_\+entity}} (const std\+::string \&)
+\begin{DoxyCompactList}\small\item\em Returns the entity with the same id. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classengine_1_1_scene_a2b81c12d19da7f2ff9377160022012ac}\label{classengine_1_1_scene_a2b81c12d19da7f2ff9377160022012ac}} 
+void \mbox{\hyperlink{classengine_1_1_scene_a2b81c12d19da7f2ff9377160022012ac}{reset\+\_\+transforms}} ()
+\begin{DoxyCompactList}\small\item\em It will read the xml and change all the transforms to their initial values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classengine_1_1_scene_a8c98f700d3f86d329ece7cd301ec25d6}{parse\+\_\+transform}} (rapidxml\+::xml\+\_\+node$<$$>$ $\ast$, \mbox{\hyperlink{classengine_1_1_entity}{Entity}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Parse xml node to a transform component, and it will be added to the entity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classengine_1_1_scene_aa2dcdb41d4ee82b705749d22726bc70e}{parse\+\_\+box\+\_\+collider\+\_\+component}} (rapidxml\+::xml\+\_\+node$<$$>$ $\ast$, \mbox{\hyperlink{classengine_1_1_entity}{Entity}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Parse xml node to a collider component, and it will be added to the entity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classengine_1_1_scene_a8f6cea5301a27da77351d7b93684c9bd}{parse\+\_\+node\+\_\+component}} (rapidxml\+::xml\+\_\+node$<$$>$ $\ast$, \mbox{\hyperlink{classengine_1_1_entity}{Entity}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Parse xml node to a component, and it will be added to the entity (some components use their own function) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classengine_1_1_scene_a76de875042a8527cef24b76b8535c988}\label{classengine_1_1_scene_a76de875042a8527cef24b76b8535c988}} 
+std\+::string {\bfseries get\+\_\+name} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classengine_1_1_scene_a98abd431757197ae21905c5f85203831}\label{classengine_1_1_scene_a98abd431757197ae21905c5f85203831}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classengine_1_1_dispatcher}{Dispatcher}} $>$ {\bfseries dispatcher}
+\item 
+\mbox{\Hypertarget{classengine_1_1_scene_adcd30163243137306f4901d4b88d0c0b}\label{classengine_1_1_scene_adcd30163243137306f4901d4b88d0c0b}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classengine_1_1_renderer___system}{Renderer\+\_\+\+System}} $>$ {\bfseries renderer\+\_\+system}
+\item 
+\mbox{\Hypertarget{classengine_1_1_scene_a4de8ccebae9d4bbba90c7a2f01db9bf1}\label{classengine_1_1_scene_a4de8ccebae9d4bbba90c7a2f01db9bf1}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classengine_1_1_control___system}{Control\+\_\+\+System}} $>$ {\bfseries control\+\_\+system}
+\item 
+\mbox{\Hypertarget{classengine_1_1_scene_aa3586c4ef04bf59c1c70a35afc8b5c66}\label{classengine_1_1_scene_aa3586c4ef04bf59c1c70a35afc8b5c66}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classengine_1_1_collision___system}{Collision\+\_\+\+System}} $>$ {\bfseries collision\+\_\+system}
+\item 
+\mbox{\Hypertarget{classengine_1_1_scene_ae213e95163cf0f1bd3a0328812a906ef}\label{classengine_1_1_scene_ae213e95163cf0f1bd3a0328812a906ef}} 
+std\+::string {\bfseries name}
+\item 
+\mbox{\Hypertarget{classengine_1_1_scene_a3b7b172d123f1e536430bf329c2df26d}\label{classengine_1_1_scene_a3b7b172d123f1e536430bf329c2df26d}} 
+std\+::string {\bfseries path}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classengine_1_1_scene_a2d512cb3650e1de51c2af78e3b9a2390}\label{classengine_1_1_scene_a2d512cb3650e1de51c2af78e3b9a2390}} 
+\index{engine::Scene@{engine::Scene}!Scene@{Scene}}
+\index{Scene@{Scene}!engine::Scene@{engine::Scene}}
+\doxysubsubsection{\texorpdfstring{Scene()}{Scene()}}
+{\footnotesize\ttfamily engine\+::\+Scene\+::\+Scene (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{path,  }\item[{\mbox{\hyperlink{classengine_1_1_window}{Window}} \&}]{window }\end{DoxyParamCaption})}
+
+
+
+Constructor of the scene, we initialize all systems and save the path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em path} & \\
+\hline
+{\em window} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classengine_1_1_scene_a842af6451d167d1ae3a086bed36258b7}\label{classengine_1_1_scene_a842af6451d167d1ae3a086bed36258b7}} 
+\index{engine::Scene@{engine::Scene}!add\_entity@{add\_entity}}
+\index{add\_entity@{add\_entity}!engine::Scene@{engine::Scene}}
+\doxysubsubsection{\texorpdfstring{add\_entity()}{add\_entity()}}
+{\footnotesize\ttfamily void engine\+::\+Scene\+::add\+\_\+entity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classengine_1_1_entity}{Entity}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+We add to the map a new entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classengine_1_1_entity}{Entity}}} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classengine_1_1_scene_ac577d9f3933876053df866357ead7a67}\label{classengine_1_1_scene_ac577d9f3933876053df866357ead7a67}} 
+\index{engine::Scene@{engine::Scene}!get\_entity@{get\_entity}}
+\index{get\_entity@{get\_entity}!engine::Scene@{engine::Scene}}
+\doxysubsubsection{\texorpdfstring{get\_entity()}{get\_entity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classengine_1_1_entity}{Entity}}$\ast$ engine\+::\+Scene\+::get\+\_\+entity (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns the entity with the same id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classengine_1_1_scene_aa2dcdb41d4ee82b705749d22726bc70e}\label{classengine_1_1_scene_aa2dcdb41d4ee82b705749d22726bc70e}} 
+\index{engine::Scene@{engine::Scene}!parse\_box\_collider\_component@{parse\_box\_collider\_component}}
+\index{parse\_box\_collider\_component@{parse\_box\_collider\_component}!engine::Scene@{engine::Scene}}
+\doxysubsubsection{\texorpdfstring{parse\_box\_collider\_component()}{parse\_box\_collider\_component()}}
+{\footnotesize\ttfamily void engine\+::\+Scene\+::parse\+\_\+box\+\_\+collider\+\_\+component (\begin{DoxyParamCaption}\item[{rapidxml\+::xml\+\_\+node$<$$>$ $\ast$}]{,  }\item[{\mbox{\hyperlink{classengine_1_1_entity}{Entity}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Parse xml node to a collider component, and it will be added to the entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+\_\+node} & \\
+\hline
+{\em entity} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classengine_1_1_scene_a8f6cea5301a27da77351d7b93684c9bd}\label{classengine_1_1_scene_a8f6cea5301a27da77351d7b93684c9bd}} 
+\index{engine::Scene@{engine::Scene}!parse\_node\_component@{parse\_node\_component}}
+\index{parse\_node\_component@{parse\_node\_component}!engine::Scene@{engine::Scene}}
+\doxysubsubsection{\texorpdfstring{parse\_node\_component()}{parse\_node\_component()}}
+{\footnotesize\ttfamily void engine\+::\+Scene\+::parse\+\_\+node\+\_\+component (\begin{DoxyParamCaption}\item[{rapidxml\+::xml\+\_\+node$<$$>$ $\ast$}]{,  }\item[{\mbox{\hyperlink{classengine_1_1_entity}{Entity}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Parse xml node to a component, and it will be added to the entity (some components use their own function) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+\_\+node} & \\
+\hline
+{\em entity} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classengine_1_1_scene_a8c98f700d3f86d329ece7cd301ec25d6}\label{classengine_1_1_scene_a8c98f700d3f86d329ece7cd301ec25d6}} 
+\index{engine::Scene@{engine::Scene}!parse\_transform@{parse\_transform}}
+\index{parse\_transform@{parse\_transform}!engine::Scene@{engine::Scene}}
+\doxysubsubsection{\texorpdfstring{parse\_transform()}{parse\_transform()}}
+{\footnotesize\ttfamily void engine\+::\+Scene\+::parse\+\_\+transform (\begin{DoxyParamCaption}\item[{rapidxml\+::xml\+\_\+node$<$$>$ $\ast$}]{,  }\item[{\mbox{\hyperlink{classengine_1_1_entity}{Entity}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Parse xml node to a transform component, and it will be added to the entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+\_\+node} & \\
+\hline
+{\em entity} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classengine_1_1_scene_a57c61c95426c877d6825ebd0f3596eae}\label{classengine_1_1_scene_a57c61c95426c877d6825ebd0f3596eae}} 
+\index{engine::Scene@{engine::Scene}!update@{update}}
+\index{update@{update}!engine::Scene@{engine::Scene}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void engine\+::\+Scene\+::update (\begin{DoxyParamCaption}\item[{float}]{time }\end{DoxyParamCaption})}
+
+
+
+Runs the run method of all systems. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/headers/scene.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,61 @@
+\hypertarget{classengine_1_1_message}{}\doxysection{engine\+::Message Class Reference}
+\label{classengine_1_1_message}\index{engine::Message@{engine::Message}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classengine_1_1_message_a287fd30700c247c24114c59cb65a00ca}\label{classengine_1_1_message_a287fd30700c247c24114c59cb65a00ca}} 
+{\bfseries Message} (const std\+::string \&id)
+\item 
+\mbox{\hyperlink{classengine_1_1_variant}{Variant}} \mbox{\hyperlink{classengine_1_1_message_a688e07084f28320be50af6dbacbc49d0}{get\+\_\+\+Variant}} (const std\+::string id)
+\begin{DoxyCompactList}\small\item\em Get a parameter from the message. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classengine_1_1_message_a7466d05bda24b800c50ba75fa2d1ebb8}\label{classengine_1_1_message_a7466d05bda24b800c50ba75fa2d1ebb8}} 
+std\+::string \mbox{\hyperlink{classengine_1_1_message_a7466d05bda24b800c50ba75fa2d1ebb8}{get\+\_\+\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Get id. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classengine_1_1_message_adb0ac3df20c44b06ddd4191f7f018836}{add\+\_\+\+Parameter}} (const std\+::string \&id, const \mbox{\hyperlink{classengine_1_1_variant}{Variant}} \&value)
+\begin{DoxyCompactList}\small\item\em Add a parameter to the message. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classengine_1_1_message_a8dd2d896bc2a92cd0bfef35efc39a398}\label{classengine_1_1_message_a8dd2d896bc2a92cd0bfef35efc39a398}} 
+\mbox{\hyperlink{classengine_1_1_variant}{Variant}} \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (const std\+::string id)
+\item 
+\mbox{\Hypertarget{classengine_1_1_message_a58599e88be4aed75d3815f89fef453ca}\label{classengine_1_1_message_a58599e88be4aed75d3815f89fef453ca}} 
+{\bfseries operator std\+::string} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classengine_1_1_message_adb0ac3df20c44b06ddd4191f7f018836}\label{classengine_1_1_message_adb0ac3df20c44b06ddd4191f7f018836}} 
+\index{engine::Message@{engine::Message}!add\_Parameter@{add\_Parameter}}
+\index{add\_Parameter@{add\_Parameter}!engine::Message@{engine::Message}}
+\doxysubsubsection{\texorpdfstring{add\_Parameter()}{add\_Parameter()}}
+{\footnotesize\ttfamily void engine\+::\+Message\+::add\+\_\+\+Parameter (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id,  }\item[{const \mbox{\hyperlink{classengine_1_1_variant}{Variant}} \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a parameter to the message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classengine_1_1_message_a688e07084f28320be50af6dbacbc49d0}\label{classengine_1_1_message_a688e07084f28320be50af6dbacbc49d0}} 
+\index{engine::Message@{engine::Message}!get\_Variant@{get\_Variant}}
+\index{get\_Variant@{get\_Variant}!engine::Message@{engine::Message}}
+\doxysubsubsection{\texorpdfstring{get\_Variant()}{get\_Variant()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classengine_1_1_variant}{Variant}} engine\+::\+Message\+::get\+\_\+\+Variant (\begin{DoxyParamCaption}\item[{const std\+::string}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a parameter from the message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/headers/message.\+hpp\end{DoxyCompactItemize}

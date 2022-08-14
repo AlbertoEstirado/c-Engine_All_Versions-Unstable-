@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32413.511
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Alberto Estirado Engine", "Alberto Estirado Engine.vcxproj", "{84BE4C51-E471-456A-95F4-856771B95814}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{84BE4C51-E471-456A-95F4-856771B95814}.Debug|x64.ActiveCfg = Debug|x64
+		{84BE4C51-E471-456A-95F4-856771B95814}.Debug|x64.Build.0 = Debug|x64
+		{84BE4C51-E471-456A-95F4-856771B95814}.Debug|x86.ActiveCfg = Debug|Win32
+		{84BE4C51-E471-456A-95F4-856771B95814}.Debug|x86.Build.0 = Debug|Win32
+		{84BE4C51-E471-456A-95F4-856771B95814}.Release|x64.ActiveCfg = Release|x64
+		{84BE4C51-E471-456A-95F4-856771B95814}.Release|x64.Build.0 = Release|x64
+		{84BE4C51-E471-456A-95F4-856771B95814}.Release|x86.ActiveCfg = Release|Win32
+		{84BE4C51-E471-456A-95F4-856771B95814}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB86B4E3-DB67-49BB-BB14-3FA8CBB15BE2}
+	EndGlobalSection
+EndGlobal

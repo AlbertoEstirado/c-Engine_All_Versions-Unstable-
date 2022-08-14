@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LevelEditorQt", "LevelEditorQt.vcxproj", "{81B2D04A-6E93-4BA2-BD2D-CF3F92E6D381}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81B2D04A-6E93-4BA2-BD2D-CF3F92E6D381}.Debug|x64.ActiveCfg = Debug|x64
+		{81B2D04A-6E93-4BA2-BD2D-CF3F92E6D381}.Debug|x64.Build.0 = Debug|x64
+		{81B2D04A-6E93-4BA2-BD2D-CF3F92E6D381}.Release|x64.ActiveCfg = Release|x64
+		{81B2D04A-6E93-4BA2-BD2D-CF3F92E6D381}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {91580434-20D4-4DED-9DD6-0F99A3F82649}
+	EndGlobalSection
+EndGlobal

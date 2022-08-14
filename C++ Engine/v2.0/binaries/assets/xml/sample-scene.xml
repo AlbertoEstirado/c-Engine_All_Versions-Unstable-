@@ -1,0 +1,2125 @@
+<?xml version="1.0"?>
+<scene id="sample-scene">
+	<entities>
+        <entity id="camera">
+            <component id="transform">
+                <position>
+                    <x>0</x><y>0</y><z>20</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>1</x><y>1</y><z>1</z>
+                </scale>
+            </component>
+            <component id="camera_component">
+                <static>0</static>
+            </component>
+        </entity>
+        <entity id="light">
+            <component id="transform">
+                <position>
+                    <x>10</x><y>10</y><z>10</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>1</x><y>1</y><z>1</z>
+                </scale>
+            </component>
+            <component id="light_component"></component>
+        </entity>
+        <entity id="coche">
+            <component id="transform">
+                <position>
+                    <x>-15</x><y>1</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>3.5</x><y>0.5</y><z>1</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/cube.obj</component>
+            <component id="rigibody2d_component">
+                <static>0</static>
+                <shape type="box">
+                    <size>
+                        <x>1</x><y>0.25</y>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="ruedaDetras">
+            <component id="transform">
+                <position>
+                    <x>-16.5</x><y>0</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>1.5</x><y>1.5</y><z>1</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>0</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>0.75</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+
+            </component>
+            <component id="joint_component">
+                <body1>coche</body1>
+                <body2>ruedaDetras</body2>
+                <enable_motor>1</enable_motor>
+             </component>
+        </entity>
+        <entity id="ruedaDelante">
+            <component id="transform">
+                <position>
+                    <x>-13.5</x><y>0</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>1.5</x><y>1.5</y><z>1</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>0</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>0.75</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+            <component id="joint_component">
+                <body1>coche</body1>
+                <body2>ruedaDetras</body2>
+                 <enable_motor>0</enable_motor>
+             </component>
+        </entity>
+
+        <entity id="plataforma">
+            <component id="transform">
+                <position>
+                    <x>-1.5</x><y>-10</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>4</x><y>1</y><z>1</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/cube.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="box">
+                    <size>
+                        <x>2</x><y>1</y>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+         <entity id="tope">
+            <component id="transform">
+                <position>
+                    <x>-3.5</x><y>-5.5</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>0.5</x><y>1</y><z>1</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/cube.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="box">
+                    <size>
+                        <x>0.25</x><y>0.5</y>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        
+        <entity id="maleteroIzq">
+            <component id="transform">
+                <position>
+                    <x>-16.5</x><y>2</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>0.5</x><y>1</y><z>1</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/cube.obj</component>
+            <component id="rigibody2d_component">
+                <static>0</static>
+                <shape type="box">
+                    <size>
+                        <x>0.25</x><y>1</y>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+             <component id="joint_component">
+                <body1>coche</body1>
+                <body2></body2>
+                 <enable_motor>1</enable_motor>
+             </component>
+        </entity>
+        <entity id="suelomaleter">
+            <component id="transform">
+                <position>
+                    <x>-15</x><y>1.5</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>3</x><y>0.5</y><z>1</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/cube.obj</component>
+            <component id="rigibody2d_component">
+                <static>0</static>
+                <shape type="box">
+                    <size>
+                        <x>1</x><y>0.2</y>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+            <component id="joint_component">
+                <body1>maleteroIzq</body1>
+                <body2></body2>
+                 <enable_motor>1</enable_motor>
+             </component>
+        </entity>
+        <entity id="maleteroDer">
+            <component id="transform">
+                <position>
+                    <x>-13.5</x><y>2</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>0.5</x><y>1</y><z>1</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/cube.obj</component>
+            <component id="rigibody2d_component">
+                <static>0</static>
+                <shape type="box">
+                    <size>
+                        <x>0.25</x><y>1</y>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+            <component id="joint_component">
+                <body1>maleteroIzq</body1>
+                <body2></body2>
+                 <enable_motor>1</enable_motor>
+             </component>
+            
+        </entity>
+        
+
+
+
+
+        <entity id="s">
+            <component id="transform">
+                <position>
+                    <x>9</x><y>10</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>1</x><y>1</y><z>1</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>0</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>0.5</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="s1">
+            <component id="transform">
+                <position>
+                    <x>9</x><y>13</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>1</x><y>1</y><z>1</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>0</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>0.5</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="s2">
+            <component id="transform">
+                <position>
+                    <x>9</x><y>12</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>1</x><y>1</y><z>1</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>0</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>0.5</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        
+
+
+
+
+        <entity id="sujetapelotas">
+            <component id="transform">
+                <position>
+                    <x>9</x><y>7</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>3</x><y>1</y><z>1</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/cube.obj</component>
+            <component id="rigibody2d_component">
+                <static>0</static>
+                <shape type="box">
+                    <size>
+                        <x>1.5</x><y>1</y>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="sujetapelotasizq">
+            <component id="transform">
+                <position>
+                    <x>7</x><y>9</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>1</x><y>1</y><z>1</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/cube.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="box">
+                    <size>
+                        <x>0.5</x><y>0.5</y>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="sujetapelotasder">
+            <component id="transform">
+                <position>
+                    <x>11</x><y>9</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>1</x><y>1</y><z>1</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/cube.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="box">
+                    <size>
+                        <x>0.5</x><y>0.5</y>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="jointsujetapelotas">
+            <component id="transform">
+                <position>
+                    <x>6</x><y>7</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>1</x><y>1</y><z>1</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/cube.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="box">
+                    <size>
+                        <x>.5</x><y>.5</y>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+            <component id="joint_component">
+                <body1>sujetapelotas</body1>
+                <body2></body2>
+                 <enable_motor>1</enable_motor>
+             </component>
+        </entity>
+
+
+
+
+
+        <entity id="f1">
+            <component id="transform">
+                <position>
+                    <x>-20</x><y>-2</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>12</x><y>1</y><z>1</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/cube.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="box">
+                    <size>
+                        <x>6</x><y>1</y>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="f2">
+            <component id="transform">
+                <position>
+                    <x>-14</x><y>-2</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="f3">
+            <component id="transform">
+                <position>
+                    <x>-13.8</x><y>-2.2</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="f4">
+            <component id="transform">
+                <position>
+                    <x>-13.6</x><y>-2.4</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="f5">
+            <component id="transform">
+                <position>
+                    <x>-13.4</x><y>-2.6</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="f6">
+            <component id="transform">
+                <position>
+                    <x>-13.2</x><y>-2.8</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="f7">
+            <component id="transform">
+                <position>
+                    <x>-13</x><y>-3</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="f8">
+            <component id="transform">
+                <position>
+                    <x>-12.8</x><y>-3.2</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="f9">
+            <component id="transform">
+                <position>
+                    <x>-12.6</x><y>-3.4</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="f10">
+            <component id="transform">
+                <position>
+                    <x>-12.4</x><y>-3.6</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="f11">
+            <component id="transform">
+                <position>
+                    <x>-12.2</x><y>-3.8</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="f12">
+            <component id="transform">
+                <position>
+                    <x>-12</x><y>-4</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="f13">
+            <component id="transform">
+                <position>
+                    <x>-11.8</x><y>-4.2</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+
+        <entity id="f14">
+            <component id="transform">
+                <position>
+                    <x>-11.4</x><y>-4.4</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="f15">
+            <component id="transform">
+                <position>
+                    <x>-11</x><y>-4.6</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="f16">
+            <component id="transform">
+                <position>
+                    <x>-10.6</x><y>-4.8</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="f17">
+            <component id="transform">
+                <position>
+                    <x>-10.2</x><y>-5</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+
+
+        <entity id="f18">
+            <component id="transform">
+                <position>
+                    <x>-9.8</x><y>-5.1</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="f19">
+            <component id="transform">
+                <position>
+                    <x>-9.4</x><y>-5.2</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="f20">
+            <component id="transform">
+                <position>
+                    <x>-9</x><y>-5.3</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+
+        <entity id="f21">
+            <component id="transform">
+                <position>
+                    <x>-8.6</x><y>-5.3</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="f22">
+            <component id="transform">
+                <position>
+                    <x>-8.2</x><y>-5.3</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="f23">
+            <component id="transform">
+                <position>
+                    <x>-7.8</x><y>-5.3</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="f24">
+            <component id="transform">
+                <position>
+                    <x>-7.4</x><y>-5.3</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="f25">
+            <component id="transform">
+                <position>
+                    <x>-7</x><y>-5.3</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="f26">
+            <component id="transform">
+                <position>
+                    <x>-6.6</x><y>-5.3</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+
+
+
+        <entity id="f27">
+            <component id="transform">
+                <position>
+                    <x>-6.2</x><y>-5.3</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="f28">
+            <component id="transform">
+                <position>
+                    <x>-5.8</x><y>-5.2</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="f29">
+            <component id="transform">
+                <position>
+                    <x>-5.4</x><y>-5.1</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="f30">
+            <component id="transform">
+                <position>
+                    <x>-5</x><y>-5</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+       
+
+       <entity id="goalSensor">
+            <component id="transform">
+                <position>
+                    <x>-5.5</x><y>6.5</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>1.5</x><y>0.5</y><z>1</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/cube.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="box">
+                    <size>
+                        <x>0.75</x><y>0.5</y>
+                    </size>
+                </shape>
+                <sensor>1</sensor>
+            </component>
+        </entity>
+        <entity id="goalSuelo">
+            <component id="transform">
+                <position>
+                    <x>-5.5</x><y>5</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>3.5</x><y>1</y><z>1</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/cube.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="box">
+                    <size>
+                        <x>1.75</x><y>0.5</y>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="goalSuelo2">
+            <component id="transform">
+                <position>
+                    <x>2.8</x><y>5</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>3.5</x><y>6</y><z>1</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/cube.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="box">
+                    <size>
+                        <x>1.75</x><y>3</y>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="goalizq">
+            <component id="transform">
+                <position>
+                    <x>-7</x><y>6</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>0.5</x><y>1</y><z>1</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/cube.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="box">
+                    <size>
+                        <x>0.25</x><y>1</y>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="goalder">
+            <component id="transform">
+                <position>
+                    <x>-4</x><y>6</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>0.5</x><y>1</y><z>1</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/cube.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="box">
+                    <size>
+                        <x>0.25</x><y>1</y>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+
+
+
+
+
+
+
+
+
+
+         <entity id="w1">
+            <component id="transform">
+                <position>
+                    <x>2</x><y>-6</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+
+        <entity id="w2">
+            <component id="transform">
+                <position>
+                    <x>2.4</x><y>-5.95</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="w3">
+            <component id="transform">
+                <position>
+                    <x>2.8</x><y>-5.9</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="w4">
+            <component id="transform">
+                <position>
+                    <x>3.2</x><y>-5.85</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="w5">
+            <component id="transform">
+                <position>
+                    <x>3.6</x><y>-5.8</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+       <entity id="w6">
+            <component id="transform">
+                <position>
+                    <x>4</x><y>-5.75</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="w7">
+            <component id="transform">
+                <position>
+                    <x>4.4</x><y>-5.7</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="w8">
+            <component id="transform">
+                <position>
+                    <x>4.8</x><y>-5.65</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="w9">
+            <component id="transform">
+                <position>
+                    <x>5.2</x><y>-5.6</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="w10">
+            <component id="transform">
+                <position>
+                    <x>5.6</x><y>-5.55</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+         <entity id="w11">
+            <component id="transform">
+                <position>
+                    <x>6</x><y>-5.5</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="w12">
+            <component id="transform">
+                <position>
+                    <x>6.4</x><y>-5.45</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="w13">
+            <component id="transform">
+                <position>
+                    <x>6.8</x><y>-5.4</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="w14">
+            <component id="transform">
+                <position>
+                    <x>7.2</x><y>-5.35</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="w15">
+            <component id="transform">
+                <position>
+                    <x>7.6</x><y>-5.3</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="w16">
+            <component id="transform">
+                <position>
+                    <x>8</x><y>-5.25</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+         <entity id="w17">
+            <component id="transform">
+                <position>
+                    <x>8.4</x><y>-5.2</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="w18">
+            <component id="transform">
+                <position>
+                    <x>8.8</x><y>-5.15</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="w19">
+            <component id="transform">
+                <position>
+                    <x>9.2</x><y>-5.1</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="w20">
+            <component id="transform">
+                <position>
+                    <x>9.6</x><y>-5.05</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="w21">
+            <component id="transform">
+                <position>
+                    <x>10</x><y>-5</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="w22">
+            <component id="transform">
+                <position>
+                    <x>10.4</x><y>-4.95</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="w23">
+            <component id="transform">
+                <position>
+                    <x>10.8</x><y>-4.9</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="w24">
+            <component id="transform">
+                <position>
+                    <x>11.2</x><y>-4.85</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="w25">
+            <component id="transform">
+                <position>
+                    <x>11.6</x><y>-4.8</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="w26">
+            <component id="transform">
+                <position>
+                    <x>12</x><y>-4.75</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="w27">
+            <component id="transform">
+                <position>
+                    <x>12.4</x><y>-4.7</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="w28">
+            <component id="transform">
+                <position>
+                    <x>12.8</x><y>-4.65</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="w29">
+            <component id="transform">
+                <position>
+                    <x>13.2</x><y>-4.6</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="w30">
+            <component id="transform">
+                <position>
+                    <x>13.6</x><y>-4.55</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="w31">
+            <component id="transform">
+                <position>
+                    <x>14</x><y>-4.5</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="w32">
+            <component id="transform">
+                <position>
+                    <x>14.4</x><y>-4.45</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="w33">
+            <component id="transform">
+                <position>
+                    <x>14.8</x><y>-4.4</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="w34">
+            <component id="transform">
+                <position>
+                    <x>15.2</x><y>-4.35</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="w35">
+            <component id="transform">
+                <position>
+                    <x>15.6</x><y>-4.3</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="w36">
+            <component id="transform">
+                <position>
+                    <x>16</x><y>-4.25</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+        <entity id="w37">
+            <component id="transform">
+                <position>
+                    <x>16.4</x><y>-4.2</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>2</x><y>2</y><z>2</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="rigibody2d_component">
+                <static>1</static>
+                <shape type="sphere">
+                    <size>
+                        <radius>1</radius>
+                    </size>
+                </shape>
+                <sensor>0</sensor>
+            </component>
+        </entity>
+
+        
+    </entities>
+</scene>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

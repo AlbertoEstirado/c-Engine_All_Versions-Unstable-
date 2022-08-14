@@ -1,0 +1,116 @@
+\hypertarget{classengine_1_1_transform}{}\doxysection{engine\+::Transform Class Reference}
+\label{classengine_1_1_transform}\index{engine::Transform@{engine::Transform}}
+Inheritance diagram for engine\+::Transform\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classengine_1_1_transform}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classengine_1_1_transform_af762bf6a76c8621415dae0c19ea8610e}\label{classengine_1_1_transform_af762bf6a76c8621415dae0c19ea8610e}} 
+{\bfseries Transform} (\mbox{\hyperlink{classengine_1_1_entity}{Entity}} $\ast$e)
+\item 
+\mbox{\Hypertarget{classengine_1_1_transform_a77e67d62d543e5839eea58a01bac9d45}\label{classengine_1_1_transform_a77e67d62d543e5839eea58a01bac9d45}} 
+{\bfseries Transform} (\mbox{\hyperlink{classengine_1_1_entity}{Entity}} $\ast$e, float x, float y, float z, \mbox{\hyperlink{classengine_1_1_transform}{Transform}} $\ast$new\+Parent=nullptr)
+\item 
+\mbox{\Hypertarget{classengine_1_1_transform_a4c6ba7d4dfa73901603ace18bb3c0ebc}\label{classengine_1_1_transform_a4c6ba7d4dfa73901603ace18bb3c0ebc}} 
+{\bfseries Transform} (\mbox{\hyperlink{classengine_1_1_entity}{Entity}} $\ast$e, Matrix44 t, \mbox{\hyperlink{classengine_1_1_transform}{Transform}} $\ast$new\+Parent=nullptr)
+\item 
+\mbox{\Hypertarget{classengine_1_1_transform_a29a8c84f87c72b4029bdc2c843cb07af}\label{classengine_1_1_transform_a29a8c84f87c72b4029bdc2c843cb07af}} 
+void {\bfseries set\+\_\+transform\+\_\+from\+\_\+\+Matrix} (Matrix44 t)
+\item 
+void \mbox{\hyperlink{classengine_1_1_transform_a264e4a3ba9fc5133fa4684e54c0d7b55}{set\+\_\+parent}} (\mbox{\hyperlink{classengine_1_1_transform}{Transform}} $\ast$new\+Parent)
+\begin{DoxyCompactList}\small\item\em Set the entity parent. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classengine_1_1_transform_a36cecf3150fbb9bd98ea6a0e491293f5}{set\+\_\+active}} (bool state)
+\begin{DoxyCompactList}\small\item\em Function to activate or deactivate the transform. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classengine_1_1_transform_a9f20234c4b86e8777c43994b550464d6}\label{classengine_1_1_transform_a9f20234c4b86e8777c43994b550464d6}} 
+Matrix44 \mbox{\hyperlink{classengine_1_1_transform_a9f20234c4b86e8777c43994b550464d6}{get\+\_\+transform\+\_\+matrix}} ()
+\begin{DoxyCompactList}\small\item\em Function that calculates the position matrix based on its position, rotation, scale and parent. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classengine_1_1_transform_aa55c2c7b3414c8de6a6f5fbca1c2a918}\label{classengine_1_1_transform_aa55c2c7b3414c8de6a6f5fbca1c2a918}} 
+float {\bfseries get\+\_\+position\+\_\+x} ()
+\item 
+\mbox{\Hypertarget{classengine_1_1_transform_a69d48408144cac516137f7a786fe2154}\label{classengine_1_1_transform_a69d48408144cac516137f7a786fe2154}} 
+float {\bfseries get\+\_\+position\+\_\+y} ()
+\item 
+\mbox{\Hypertarget{classengine_1_1_transform_aca0088fc9ba640096a6e80f6a9380894}\label{classengine_1_1_transform_aca0088fc9ba640096a6e80f6a9380894}} 
+float {\bfseries get\+\_\+position\+\_\+z} ()
+\item 
+\mbox{\Hypertarget{classengine_1_1_transform_a628d0ac1ace7441973d7aa470faebd30}\label{classengine_1_1_transform_a628d0ac1ace7441973d7aa470faebd30}} 
+float {\bfseries get\+\_\+rotation\+\_\+x} ()
+\item 
+\mbox{\Hypertarget{classengine_1_1_transform_a890acb66680540a11e8844aee2bcc81f}\label{classengine_1_1_transform_a890acb66680540a11e8844aee2bcc81f}} 
+float {\bfseries get\+\_\+rotation\+\_\+y} ()
+\item 
+\mbox{\Hypertarget{classengine_1_1_transform_aac52176c741b89c2ddb81b54019da1f2}\label{classengine_1_1_transform_aac52176c741b89c2ddb81b54019da1f2}} 
+float {\bfseries get\+\_\+rotation\+\_\+z} ()
+\item 
+\mbox{\Hypertarget{classengine_1_1_transform_af74da997afe40b8284c8b4eacd1c9103}\label{classengine_1_1_transform_af74da997afe40b8284c8b4eacd1c9103}} 
+float {\bfseries get\+\_\+scale\+\_\+x} ()
+\item 
+\mbox{\Hypertarget{classengine_1_1_transform_ac15e26948485627c89ca4fa663dadc49}\label{classengine_1_1_transform_ac15e26948485627c89ca4fa663dadc49}} 
+float {\bfseries get\+\_\+scale\+\_\+y} ()
+\item 
+\mbox{\Hypertarget{classengine_1_1_transform_aaa5609d1ed668da21fe07780049e5071}\label{classengine_1_1_transform_aaa5609d1ed668da21fe07780049e5071}} 
+float {\bfseries get\+\_\+scale\+\_\+z} ()
+\item 
+\mbox{\Hypertarget{classengine_1_1_transform_a1dd1d709a68020fb5a505d74810e4ff4}\label{classengine_1_1_transform_a1dd1d709a68020fb5a505d74810e4ff4}} 
+void {\bfseries print\+\_\+transform} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classengine_1_1_transform_aea0c0b455569ff3204a55ac1e8288765}\label{classengine_1_1_transform_aea0c0b455569ff3204a55ac1e8288765}} 
+Vector3 {\bfseries position}
+\item 
+\mbox{\Hypertarget{classengine_1_1_transform_a5e48019d97ec20fa9608dcf1ed37bffc}\label{classengine_1_1_transform_a5e48019d97ec20fa9608dcf1ed37bffc}} 
+Vector3 {\bfseries rotation}
+\item 
+\mbox{\Hypertarget{classengine_1_1_transform_a121d5df2b44c8b04a44f95b79e527bd7}\label{classengine_1_1_transform_a121d5df2b44c8b04a44f95b79e527bd7}} 
+Vector3 {\bfseries scale}
+\item 
+\mbox{\Hypertarget{classengine_1_1_transform_a30f7473f1ea5909a65042cb61526519e}\label{classengine_1_1_transform_a30f7473f1ea5909a65042cb61526519e}} 
+\mbox{\hyperlink{classengine_1_1_transform}{Transform}} $\ast$ {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classengine_1_1_transform_ab451ee6df75ee856488ca7dd7b693306}\label{classengine_1_1_transform_ab451ee6df75ee856488ca7dd7b693306}} 
+bool {\bfseries active}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classengine_1_1_transform_a36cecf3150fbb9bd98ea6a0e491293f5}\label{classengine_1_1_transform_a36cecf3150fbb9bd98ea6a0e491293f5}} 
+\index{engine::Transform@{engine::Transform}!set\_active@{set\_active}}
+\index{set\_active@{set\_active}!engine::Transform@{engine::Transform}}
+\doxysubsubsection{\texorpdfstring{set\_active()}{set\_active()}}
+{\footnotesize\ttfamily void engine\+::\+Transform\+::set\+\_\+active (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to activate or deactivate the transform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classengine_1_1_transform_a264e4a3ba9fc5133fa4684e54c0d7b55}\label{classengine_1_1_transform_a264e4a3ba9fc5133fa4684e54c0d7b55}} 
+\index{engine::Transform@{engine::Transform}!set\_parent@{set\_parent}}
+\index{set\_parent@{set\_parent}!engine::Transform@{engine::Transform}}
+\doxysubsubsection{\texorpdfstring{set\_parent()}{set\_parent()}}
+{\footnotesize\ttfamily void engine\+::\+Transform\+::set\+\_\+parent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classengine_1_1_transform}{Transform}} $\ast$}]{new\+Parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the entity parent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Parent} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/headers/transform.\+hpp\end{DoxyCompactItemize}

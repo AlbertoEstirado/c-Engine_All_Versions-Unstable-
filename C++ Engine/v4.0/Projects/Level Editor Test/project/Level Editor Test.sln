@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32413.511
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Level Editor Test", "Level Editor Test.vcxproj", "{2226816E-C9F0-44ED-8975-BF353FFF3D7C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{34249DC0-5EEC-49C9-AB94-87D04A6C6F1A} = {34249DC0-5EEC-49C9-AB94-87D04A6C6F1A}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Level Editor Backend", "..\..\Level Editor Backend\project\Level Editor Backend.vcxproj", "{34249DC0-5EEC-49C9-AB94-87D04A6C6F1A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{84BE4C51-E471-456A-95F4-856771B95814} = {84BE4C51-E471-456A-95F4-856771B95814}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Alberto Estirado Engine", "..\..\Engine\project\Alberto Estirado Engine.vcxproj", "{84BE4C51-E471-456A-95F4-856771B95814}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LevelEditorQt", "..\..\Level Editor GUI\LevelEditorQt\vs19\LevelEditorQt.vcxproj", "{81B2D04A-6E93-4BA2-BD2D-CF3F92E6D381}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2226816E-C9F0-44ED-8975-BF353FFF3D7C} = {2226816E-C9F0-44ED-8975-BF353FFF3D7C}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2226816E-C9F0-44ED-8975-BF353FFF3D7C}.Debug|x64.ActiveCfg = Debug|x64
+		{2226816E-C9F0-44ED-8975-BF353FFF3D7C}.Debug|x64.Build.0 = Debug|x64
+		{2226816E-C9F0-44ED-8975-BF353FFF3D7C}.Release|x64.ActiveCfg = Release|x64
+		{2226816E-C9F0-44ED-8975-BF353FFF3D7C}.Release|x64.Build.0 = Release|x64
+		{34249DC0-5EEC-49C9-AB94-87D04A6C6F1A}.Debug|x64.ActiveCfg = Debug|x64
+		{34249DC0-5EEC-49C9-AB94-87D04A6C6F1A}.Debug|x64.Build.0 = Debug|x64
+		{34249DC0-5EEC-49C9-AB94-87D04A6C6F1A}.Release|x64.ActiveCfg = Release|x64
+		{34249DC0-5EEC-49C9-AB94-87D04A6C6F1A}.Release|x64.Build.0 = Release|x64
+		{84BE4C51-E471-456A-95F4-856771B95814}.Debug|x64.ActiveCfg = Debug|x64
+		{84BE4C51-E471-456A-95F4-856771B95814}.Debug|x64.Build.0 = Debug|x64
+		{84BE4C51-E471-456A-95F4-856771B95814}.Release|x64.ActiveCfg = Release|x64
+		{84BE4C51-E471-456A-95F4-856771B95814}.Release|x64.Build.0 = Release|x64
+		{81B2D04A-6E93-4BA2-BD2D-CF3F92E6D381}.Debug|x64.ActiveCfg = Debug|x64
+		{81B2D04A-6E93-4BA2-BD2D-CF3F92E6D381}.Debug|x64.Build.0 = Debug|x64
+		{81B2D04A-6E93-4BA2-BD2D-CF3F92E6D381}.Release|x64.ActiveCfg = Release|x64
+		{81B2D04A-6E93-4BA2-BD2D-CF3F92E6D381}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {85E4BCDB-0534-4BA5-9AB9-877D15CD9ED4}
+	EndGlobalSection
+EndGlobal

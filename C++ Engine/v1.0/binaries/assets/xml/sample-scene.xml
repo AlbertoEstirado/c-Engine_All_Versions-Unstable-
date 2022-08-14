@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+<scene id="sample-scene">
+	<entities>
+        <entity id="player">
+            <component id="transform">
+                <position>
+                    <x>0</x><y>0</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>0.8</x><y>0.8</y><z>0.8</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+            <component id="box_collider_component">
+                <scale_x>1</scale_x>
+                <scale_z>1</scale_z>
+                <type>dynamic</type>
+            </component>
+        </entity>
+        <entity id="camera">
+            <component id="transform">
+                <position>
+                    <x>0</x><y>6</y><z>7</z>
+                </position>
+                <rotation>
+                    <x>-1</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>1</x><y>1</y><z>1</z>
+                </scale>
+            </component>
+            <component id="camera_component"></component>
+        </entity>
+        <entity id="light">
+            <component id="transform">
+                <position>
+                    <x>10</x><y>10</y><z>10</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>1</x><y>1</y><z>1</z>
+                </scale>
+            </component>
+            <component id="light_component"></component>
+        </entity>
+        <entity id="moon">
+            <component id="transform" parent="player">
+                <position>
+                    <x>0.8</x><y>0</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>0.5</x><y>0.5</y><z>0.5</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+        </entity>
+        <entity id="moon1">
+            <component id="transform" parent="player">
+                <position>
+                    <x>-0.7</x><y>0.3</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>0.3</x><y>0.3</y><z>0.3</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+        </entity>
+        <entity id="moon2">
+            <component id="transform" parent="moon">
+                <position>
+                    <x>0.8</x><y>0.3</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>0.25</x><y>0.25</y><z>0.25</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/sphere.obj</component>
+        </entity>
+        <entity id="floor">
+            <component id="transform">
+                <position>
+                    <x>0</x><y>-2</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>12</x><y>1</y><z>12</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/cube.obj</component>
+        </entity>
+        <entity id="enemie1">
+            <component id="transform">
+                <position>
+                    <x>3</x><y>0</y><z>3</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>0.5</x><y>0.5</y><z>0.5</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/stanford-bunny.obj</component>
+            <component id="box_collider_component">
+                <scale_x>0.5</scale_x>
+                <scale_z>0.5</scale_z>
+                <type>dynamic</type>
+            </component>
+        </entity>
+         <entity id="enemie2">
+            <component id="transform">
+                <position>
+                    <x>-3</x><y>0</y><z>3</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>0.5</x><y>0.5</y><z>0.5</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/stanford-bunny.obj</component>
+            <component id="box_collider_component">
+                <scale_x>0.5</scale_x>
+                <scale_z>0.5</scale_z>
+                <type>dynamic</type>
+            </component>
+        </entity>
+        <entity id="enemie3">
+            <component id="transform">
+                <position>
+                    <x>3</x><y>0</y><z>-3</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>0.5</x><y>0.5</y><z>0.5</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/stanford-bunny.obj</component>
+            <component id="box_collider_component">
+                <scale_x>0.5</scale_x>
+                <scale_z>0.5</scale_z>
+                <type>dynamic</type>
+            </component>
+        </entity>
+        <entity id="enemie4">
+            <component id="transform">
+                <position>
+                    <x>-3</x><y>0</y><z>-3</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>      
+                    <x>0.5</x><y>0.5</y><z>0.5</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/stanford-bunny.obj</component>
+            <component id="box_collider_component">
+                <scale_x>0.5</scale_x>
+                <scale_z>0.5</scale_z>
+                <type>dynamic</type>
+            </component>
+        </entity>
+        <entity id="wall">
+            <component id="transform">
+                <position>
+                    <x>6</x><y>-1</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>1</x><y>0.5</y><z>12</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/cube.obj</component>
+            <component id="box_collider_component">
+                <scale_x>1</scale_x>
+                <scale_z>12</scale_z>
+                <type>static</type>
+            </component>
+        </entity>
+        <entity id="wall1">
+            <component id="transform">
+                <position>
+                    <x>-6</x><y>-1</y><z>0</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>1</x><y>0.5</y><z>12</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/cube.obj</component>
+            <component id="box_collider_component">
+                <scale_x>1</scale_x>
+                <scale_z>12</scale_z>
+                <type>static</type>
+            </component>
+        </entity>
+        <entity id="wall2">
+            <component id="transform">
+                <position>
+                    <x>0</x><y>-1</y><z>-6</z>
+                </position>
+                <rotation>
+                    <x>0</x><y>0</y><z>0</z>
+                </rotation>
+                <scale>
+                    <x>12</x><y>0.5</y><z>1</z>
+                </scale>
+            </component>
+            <component id="mesh_component">assets/models/cube.obj</component>
+            <component id="box_collider_component">
+                <scale_x>12</scale_x>
+                <scale_z>1</scale_z>
+                <type>static</type>
+            </component>
+        </entity>
+    </entities>
+</scene>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

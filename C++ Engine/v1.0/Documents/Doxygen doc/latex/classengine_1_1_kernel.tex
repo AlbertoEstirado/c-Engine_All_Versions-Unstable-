@@ -1,0 +1,57 @@
+\hypertarget{classengine_1_1_kernel}{}\doxysection{engine\+::Kernel Class Reference}
+\label{classengine_1_1_kernel}\index{engine::Kernel@{engine::Kernel}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classengine_1_1_kernel_a31860816c974f24565dae47709996d07}\label{classengine_1_1_kernel_a31860816c974f24565dae47709996d07}} 
+void \mbox{\hyperlink{classengine_1_1_kernel_a31860816c974f24565dae47709996d07}{initialization}} ()
+\begin{DoxyCompactList}\small\item\em Initialization of all tasks. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classengine_1_1_kernel_a5526e232ddc1d62e3143f2780c6a46a6}\label{classengine_1_1_kernel_a5526e232ddc1d62e3143f2780c6a46a6}} 
+void \mbox{\hyperlink{classengine_1_1_kernel_a5526e232ddc1d62e3143f2780c6a46a6}{execute}} ()
+\begin{DoxyCompactList}\small\item\em Run all tasks. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classengine_1_1_kernel_a350e987e8c628a3030c00c6d6a93b4cb}\label{classengine_1_1_kernel_a350e987e8c628a3030c00c6d6a93b4cb}} 
+void \mbox{\hyperlink{classengine_1_1_kernel_a350e987e8c628a3030c00c6d6a93b4cb}{end}} ()
+\begin{DoxyCompactList}\small\item\em End of all tasks. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classengine_1_1_kernel_a4bbe9b983282871708f334871a23b0ee}\label{classengine_1_1_kernel_a4bbe9b983282871708f334871a23b0ee}} 
+void \mbox{\hyperlink{classengine_1_1_kernel_a4bbe9b983282871708f334871a23b0ee}{stop\+\_\+kernel}} ()
+\begin{DoxyCompactList}\small\item\em Change running to false. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classengine_1_1_kernel_a534adb22c899200c31cf0045ec27291f}{add\+\_\+task}} (\mbox{\hyperlink{classengine_1_1_task}{Task}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Add a new task to kernel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classengine_1_1_kernel_aca15c62db91867dbe849667d8b8d5d60}\label{classengine_1_1_kernel_aca15c62db91867dbe849667d8b8d5d60}} 
+static \mbox{\hyperlink{classengine_1_1_kernel}{Kernel}} \& {\bfseries instance} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classengine_1_1_kernel_ae28dadf4f40ddc6d58f49f4606f45ea3}\label{classengine_1_1_kernel_ae28dadf4f40ddc6d58f49f4606f45ea3}} 
+std\+::set$<$ \mbox{\hyperlink{classengine_1_1_task}{Task}} $\ast$, \mbox{\hyperlink{structengine_1_1_task_1_1_compare}{Task\+::\+Compare}} $>$ {\bfseries tasks}
+\item 
+\mbox{\Hypertarget{classengine_1_1_kernel_a4ab4430a1bf8deb8fda0f2b6ae796599}\label{classengine_1_1_kernel_a4ab4430a1bf8deb8fda0f2b6ae796599}} 
+bool {\bfseries running} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classengine_1_1_kernel_a534adb22c899200c31cf0045ec27291f}\label{classengine_1_1_kernel_a534adb22c899200c31cf0045ec27291f}} 
+\index{engine::Kernel@{engine::Kernel}!add\_task@{add\_task}}
+\index{add\_task@{add\_task}!engine::Kernel@{engine::Kernel}}
+\doxysubsubsection{\texorpdfstring{add\_task()}{add\_task()}}
+{\footnotesize\ttfamily void engine\+::\+Kernel\+::add\+\_\+task (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classengine_1_1_task}{Task}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Add a new task to kernel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classengine_1_1_task}{Task}}} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/headers/kernel.\+hpp\end{DoxyCompactItemize}

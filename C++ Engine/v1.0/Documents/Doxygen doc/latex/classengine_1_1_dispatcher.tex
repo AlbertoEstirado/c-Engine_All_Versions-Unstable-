@@ -1,0 +1,59 @@
+\hypertarget{classengine_1_1_dispatcher}{}\doxysection{engine\+::Dispatcher Class Reference}
+\label{classengine_1_1_dispatcher}\index{engine::Dispatcher@{engine::Dispatcher}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structengine_1_1_dispatcher_1_1_listener}{Listener}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classengine_1_1_dispatcher_aa124f8fe28c7b0fd5b0ae99b19c4c29b}{add\+\_\+listener}} (std\+::string id, \mbox{\hyperlink{structengine_1_1_dispatcher_1_1_listener}{Listener}} \&listener)
+\item 
+void \mbox{\hyperlink{classengine_1_1_dispatcher_a7fe9d7bc4e5caf8aeab8bffa23f20548}{remove\+\_\+listener}} (\mbox{\hyperlink{structengine_1_1_dispatcher_1_1_listener}{Listener}} \&listener)
+\item 
+void \mbox{\hyperlink{classengine_1_1_dispatcher_a3d2a2acce5baab535b9d38edae419207}{multicast}} (\mbox{\hyperlink{classengine_1_1_message}{Message}} \&message)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classengine_1_1_dispatcher_aa124f8fe28c7b0fd5b0ae99b19c4c29b}\label{classengine_1_1_dispatcher_aa124f8fe28c7b0fd5b0ae99b19c4c29b}} 
+\index{engine::Dispatcher@{engine::Dispatcher}!add\_listener@{add\_listener}}
+\index{add\_listener@{add\_listener}!engine::Dispatcher@{engine::Dispatcher}}
+\doxysubsubsection{\texorpdfstring{add\_listener()}{add\_listener()}}
+{\footnotesize\ttfamily void engine\+::\+Dispatcher\+::add\+\_\+listener (\begin{DoxyParamCaption}\item[{std\+::string}]{id,  }\item[{\mbox{\hyperlink{structengine_1_1_dispatcher_1_1_listener}{Listener}} \&}]{listener }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add a listener 
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+{\em listener} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classengine_1_1_dispatcher_a3d2a2acce5baab535b9d38edae419207}\label{classengine_1_1_dispatcher_a3d2a2acce5baab535b9d38edae419207}} 
+\index{engine::Dispatcher@{engine::Dispatcher}!multicast@{multicast}}
+\index{multicast@{multicast}!engine::Dispatcher@{engine::Dispatcher}}
+\doxysubsubsection{\texorpdfstring{multicast()}{multicast()}}
+{\footnotesize\ttfamily void engine\+::\+Dispatcher\+::multicast (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classengine_1_1_message}{Message}} \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Broadcast a message 
+\begin{DoxyParams}{Parameters}
+{\em message} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classengine_1_1_dispatcher_a7fe9d7bc4e5caf8aeab8bffa23f20548}\label{classengine_1_1_dispatcher_a7fe9d7bc4e5caf8aeab8bffa23f20548}} 
+\index{engine::Dispatcher@{engine::Dispatcher}!remove\_listener@{remove\_listener}}
+\index{remove\_listener@{remove\_listener}!engine::Dispatcher@{engine::Dispatcher}}
+\doxysubsubsection{\texorpdfstring{remove\_listener()}{remove\_listener()}}
+{\footnotesize\ttfamily void engine\+::\+Dispatcher\+::remove\+\_\+listener (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structengine_1_1_dispatcher_1_1_listener}{Listener}} \&}]{listener }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Remove a listener 
+\begin{DoxyParams}{Parameters}
+{\em listener} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/headers/dispatcher.\+hpp\end{DoxyCompactItemize}

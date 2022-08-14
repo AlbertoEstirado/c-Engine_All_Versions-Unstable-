@@ -1,0 +1,96 @@
+\hypertarget{classengine_1_1_entity}{}\doxysection{engine\+::Entity Class Reference}
+\label{classengine_1_1_entity}\index{engine::Entity@{engine::Entity}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classengine_1_1_entity_a10b8529780c5dc32ea8647505dea8885}\label{classengine_1_1_entity_a10b8529780c5dc32ea8647505dea8885}} 
+{\bfseries Entity} (std\+::string \&id, \mbox{\hyperlink{classengine_1_1_scene}{Scene}} $\ast$scene)
+\item 
+\mbox{\hyperlink{classengine_1_1_entity_a90ea408c32702abe9878732cbe702dcc}{Entity}} (std\+::string \&id, \mbox{\hyperlink{classengine_1_1_transform}{Transform}} $\ast$transform)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classengine_1_1_entity}{Entity}} constructor, needs an id and a transform. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classengine_1_1_entity_a55a6aa8adcada8f895b2dc83e2de18f1}\label{classengine_1_1_entity_a55a6aa8adcada8f895b2dc83e2de18f1}} 
+{\bfseries Entity} (std\+::string \&id)
+\item 
+void \mbox{\hyperlink{classengine_1_1_entity_ae47d2a465c64e8d86a9e59041fc7a81c}{add\+\_\+component}} (\mbox{\hyperlink{classengine_1_1_component}{Component}} $\ast$new\+\_\+component)
+\begin{DoxyCompactList}\small\item\em Functition to add new components to the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classengine_1_1_entity_a78eae482e6ef94102ddc2cbe20cd3b30}{add\+\_\+transform}} (\mbox{\hyperlink{classengine_1_1_transform}{Transform}} $\ast$new\+\_\+component)
+\begin{DoxyCompactList}\small\item\em Functition to establish a transform. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classengine_1_1_entity_a354379fec6e77f4512bc5a1c0e799ad4}\label{classengine_1_1_entity_a354379fec6e77f4512bc5a1c0e799ad4}} 
+\mbox{\hyperlink{classengine_1_1_transform}{Transform}} $\ast$ \mbox{\hyperlink{classengine_1_1_entity_a354379fec6e77f4512bc5a1c0e799ad4}{get\+\_\+transform}} ()
+\begin{DoxyCompactList}\small\item\em Returns the transform entity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classengine_1_1_entity_ab88cabe410fbb8b3fa22f238588c43a7}\label{classengine_1_1_entity_ab88cabe410fbb8b3fa22f238588c43a7}} 
+{\footnotesize template$<$typename T $>$ }\\T $\ast$ \mbox{\hyperlink{classengine_1_1_entity_ab88cabe410fbb8b3fa22f238588c43a7}{get\+\_\+component}} ()
+\begin{DoxyCompactList}\small\item\em Returns the component of the indicated type in case the entity contains it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classengine_1_1_entity_aceb92949473976f0b94ee192ab2bc344}\label{classengine_1_1_entity_aceb92949473976f0b94ee192ab2bc344}} 
+std\+::string {\bfseries id}
+\item 
+\mbox{\Hypertarget{classengine_1_1_entity_af135fed285fb22755cea2d137ec2e7bb}\label{classengine_1_1_entity_af135fed285fb22755cea2d137ec2e7bb}} 
+std\+::vector$<$ \mbox{\hyperlink{classengine_1_1_component}{Component}} $\ast$ $>$ {\bfseries components}
+\item 
+\mbox{\Hypertarget{classengine_1_1_entity_a8d2eaef4395b925fef8d2291860eede9}\label{classengine_1_1_entity_a8d2eaef4395b925fef8d2291860eede9}} 
+\mbox{\hyperlink{classengine_1_1_transform}{Transform}} $\ast$ {\bfseries transform} = nullptr
+\item 
+\mbox{\Hypertarget{classengine_1_1_entity_a5bd14600fd5b97392f6edfd77b085cf7}\label{classengine_1_1_entity_a5bd14600fd5b97392f6edfd77b085cf7}} 
+\mbox{\hyperlink{classengine_1_1_scene}{Scene}} $\ast$ {\bfseries scene} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classengine_1_1_entity_a90ea408c32702abe9878732cbe702dcc}\label{classengine_1_1_entity_a90ea408c32702abe9878732cbe702dcc}} 
+\index{engine::Entity@{engine::Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!engine::Entity@{engine::Entity}}
+\doxysubsubsection{\texorpdfstring{Entity()}{Entity()}}
+{\footnotesize\ttfamily engine\+::\+Entity\+::\+Entity (\begin{DoxyParamCaption}\item[{std\+::string \&}]{id,  }\item[{\mbox{\hyperlink{classengine_1_1_transform}{Transform}} $\ast$}]{transform }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classengine_1_1_entity}{Entity}} constructor, needs an id and a transform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+{\em transform} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classengine_1_1_entity_ae47d2a465c64e8d86a9e59041fc7a81c}\label{classengine_1_1_entity_ae47d2a465c64e8d86a9e59041fc7a81c}} 
+\index{engine::Entity@{engine::Entity}!add\_component@{add\_component}}
+\index{add\_component@{add\_component}!engine::Entity@{engine::Entity}}
+\doxysubsubsection{\texorpdfstring{add\_component()}{add\_component()}}
+{\footnotesize\ttfamily void engine\+::\+Entity\+::add\+\_\+component (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classengine_1_1_component}{Component}} $\ast$}]{new\+\_\+component }\end{DoxyParamCaption})}
+
+
+
+Functition to add new components to the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+component} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classengine_1_1_entity_a78eae482e6ef94102ddc2cbe20cd3b30}\label{classengine_1_1_entity_a78eae482e6ef94102ddc2cbe20cd3b30}} 
+\index{engine::Entity@{engine::Entity}!add\_transform@{add\_transform}}
+\index{add\_transform@{add\_transform}!engine::Entity@{engine::Entity}}
+\doxysubsubsection{\texorpdfstring{add\_transform()}{add\_transform()}}
+{\footnotesize\ttfamily void engine\+::\+Entity\+::add\+\_\+transform (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classengine_1_1_transform}{Transform}} $\ast$}]{new\+\_\+component }\end{DoxyParamCaption})}
+
+
+
+Functition to establish a transform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+component} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/headers/entity.\+hpp\end{DoxyCompactItemize}

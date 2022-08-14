@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{84be4c51-e471-456a-95f4-856771b95814}</ProjectGuid>
+    <RootNamespace>AlbertoEstiradoEngine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\code\headers;..\libraries\box2d-2.4.1\include;..\libraries\opengl-toolkit\headers;..\libraries\rapidxml;..\libraries\sdl2-vs\include;..\libraries\sdl2-mixer-vs\include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>..\libraries\box2d-2.4.1\lib\windows\x64;..\libraries\opengl-toolkit\lib\x64;..\libraries\sdl2-vs\lib\x64;..\libraries\sdl2-mixer-vs\lib\static\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>box2d-debug.lib;opengl-toolkit-debug.lib;SDL2d.lib;SDL2-mixer-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\code\headers;..\libraries\box2d-2.4.1\include;..\libraries\opengl-toolkit\headers;..\libraries\rapidxml;..\libraries\sdl2-vs\include;..\libraries\sdl2-mixer-vs\include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>..\libraries\box2d-2.4.1\lib\windows\x64;..\libraries\opengl-toolkit\lib\x64;..\libraries\sdl2-vs\lib\x64;..\libraries\sdl2-mixer-vs\lib\static\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\code\headers\engine\ballsholder_controller.hpp" />
+    <ClInclude Include="..\code\headers\engine\box_collider_component.hpp" />
+    <ClInclude Include="..\code\headers\engine\camera_component.hpp" />
+    <ClInclude Include="..\code\headers\engine\collider_component.hpp" />
+    <ClInclude Include="..\code\headers\engine\collision_handler.hpp" />
+    <ClInclude Include="..\code\headers\engine\collision_system.hpp" />
+    <ClInclude Include="..\code\headers\engine\component.hpp" />
+    <ClInclude Include="..\code\headers\engine\contact_listener_component.hpp" />
+    <ClInclude Include="..\code\headers\engine\controller.hpp" />
+    <ClInclude Include="..\code\headers\engine\control_system.hpp" />
+    <ClInclude Include="..\code\headers\engine\declarations.hpp" />
+    <ClInclude Include="..\code\headers\engine\dispatcher.hpp" />
+    <ClInclude Include="..\code\headers\engine\elevator_controller.hpp" />
+    <ClInclude Include="..\code\headers\engine\enemie_behaviour_controller.hpp" />
+    <ClInclude Include="..\code\headers\engine\entity.hpp" />
+    <ClInclude Include="..\code\headers\engine\input_system.hpp" />
+    <ClInclude Include="..\code\headers\engine\joint_component.hpp" />
+    <ClInclude Include="..\code\headers\engine\kernel.hpp" />
+    <ClInclude Include="..\code\headers\engine\keyboard.hpp" />
+    <ClInclude Include="..\code\headers\engine\keyboardcontrol_component.hpp" />
+    <ClInclude Include="..\code\headers\engine\light_component.hpp" />
+    <ClInclude Include="..\code\headers\engine\mesh_component.hpp" />
+    <ClInclude Include="..\code\headers\engine\message.hpp" />
+    <ClInclude Include="..\code\headers\engine\physics2d_system.hpp" />
+    <ClInclude Include="..\code\headers\engine\player_movement_controller.hpp" />
+    <ClInclude Include="..\code\headers\engine\read_input.hpp" />
+    <ClInclude Include="..\code\headers\engine\render.hpp" />
+    <ClInclude Include="..\code\headers\engine\renderer_system.hpp" />
+    <ClInclude Include="..\code\headers\engine\render_component.hpp" />
+    <ClInclude Include="..\code\headers\engine\rigibody2d_component.hpp" />
+    <ClInclude Include="..\code\headers\engine\scene.hpp" />
+    <ClInclude Include="..\code\headers\engine\scene_manager.hpp" />
+    <ClInclude Include="..\code\headers\engine\system.hpp" />
+    <ClInclude Include="..\code\headers\engine\task.hpp" />
+    <ClInclude Include="..\code\headers\engine\transform.hpp" />
+    <ClInclude Include="..\code\headers\engine\update.hpp" />
+    <ClInclude Include="..\code\headers\engine\variant.hpp" />
+    <ClInclude Include="..\code\headers\engine\window.hpp" />
+    <ClInclude Include="..\code\headers\engine\world_controller.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\code\sources\ballsholder_controller.cpp" />
+    <ClCompile Include="..\code\sources\box_collider_component.cpp" />
+    <ClCompile Include="..\code\sources\camera_component.cpp" />
+    <ClCompile Include="..\code\sources\colision_system.cpp" />
+    <ClCompile Include="..\code\sources\control_system.cpp" />
+    <ClCompile Include="..\code\sources\elevator_controller.cpp" />
+    <ClCompile Include="..\code\sources\enemie_behaviour_controller.cpp" />
+    <ClCompile Include="..\code\sources\entity.cpp" />
+    <ClCompile Include="..\code\sources\input_system.cpp" />
+    <ClCompile Include="..\code\sources\joint_component.cpp" />
+    <ClCompile Include="..\code\sources\kernel.cpp" />
+    <ClCompile Include="..\code\sources\keyboard.cpp" />
+    <ClCompile Include="..\code\sources\keyboardcontrol_component.cpp" />
+    <ClCompile Include="..\code\sources\light_component.cpp" />
+    <ClCompile Include="..\code\sources\mesh_component.cpp" />
+    <ClCompile Include="..\code\sources\physics2d_system.cpp" />
+    <ClCompile Include="..\code\sources\player_movement_controller.cpp" />
+    <ClCompile Include="..\code\sources\read_input.cpp" />
+    <ClCompile Include="..\code\sources\render.cpp" />
+    <ClCompile Include="..\code\sources\renderer_system.cpp" />
+    <ClCompile Include="..\code\sources\render_component.cpp" />
+    <ClCompile Include="..\code\sources\rigibody2d_component.cpp" />
+    <ClCompile Include="..\code\sources\scene.cpp" />
+    <ClCompile Include="..\code\sources\scene_manager.cpp" />
+    <ClCompile Include="..\code\sources\system.cpp" />
+    <ClCompile Include="..\code\sources\transform.cpp" />
+    <ClCompile Include="..\code\sources\update.cpp" />
+    <ClCompile Include="..\code\sources\window.cpp" />
+    <ClCompile Include="..\code\sources\winmain.cpp" />
+    <ClCompile Include="..\code\sources\world_controller.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
